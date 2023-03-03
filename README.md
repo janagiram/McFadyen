@@ -1,7 +1,9 @@
 # McFadyen
 
 **Magento Version - 2.4.5-p2**
+
 Vendor - McFadyen
+
 Theme - test
 
 Theme Path: app/design/frontend/MCFADYEN/test - McFadyen test theme
