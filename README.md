@@ -24,4 +24,9 @@ Created Following things during the development
 1. identifier - **editor-blog** to display the editor blog content in product detail page bottom
 2. identifier - **free-interest-payment** static blog to display the Karlna interest free payment text display below the add to cart button
 
+Desktop Development Preview
+![previrew](https://user-images.githubusercontent.com/5866672/222802753-7c6dcee3-5d27-4bdf-93b5-e649cf59f926.png)
+
+Mobile Development Preview
+![mobile-preview](https://user-images.githubusercontent.com/5866672/222802963-77af4ac1-d873-4b38-ae13-17dd1cd8d150.png)
 
