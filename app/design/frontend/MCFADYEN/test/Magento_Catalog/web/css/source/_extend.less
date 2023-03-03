@@ -1,0 +1,79 @@
+/*
+ *
+ *  * Author: Janagiram Ramakrishnan
+ *  * Email: janagirammca@gmail.com
+ *
+ */
+
+& when (@media-common = true) {
+    .product.media {
+        .reviews-actions {
+            float: right;
+            right: 70px;
+            top: 34px;
+            position: relative;
+            display: block;
+            z-index: 999;
+            .action.add {
+                width: 24px;
+                height: 24px;
+                background: url("../images/wishlist.svg") no-repeat;
+                display: block;
+                text-indent: -9999px;
+            }
+        }
+    }
+
+    .free-interest-payment {
+        a {
+            text-transform: uppercase;
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    .catalog-product-view {
+        &.page-layout-1column {
+            .column.main {
+                display: flex;
+            }
+        }
+    }
+
+    .product.data.items {
+        > .item.title {
+            > .switch {
+                min-width: 80px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            &.active > .switch,
+            &.active > .switch:focus,
+            &.active > .switch:hover {
+                .lib-css(font-weight,600);
+            }
+            &:first-child {
+                > .switch {
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .product.data.items {
+        > .item.title {
+            background-color: #e3e3e3;
+        }
+    }
+}

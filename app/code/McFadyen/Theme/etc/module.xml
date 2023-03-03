@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--
+  ~ Author: Janagiram Ramakrishnan
+  ~ Email: janagirammca@gmail.com
+  ~ Copyright (c) FC.  All rights reserved.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="McFadyen_Theme" setup_version="1.0.0"/>
+</config>

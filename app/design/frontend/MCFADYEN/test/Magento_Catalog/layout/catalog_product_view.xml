@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Author: Janagiram Ramakrishnan
+ * Email: janagirammca@gmail.com
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="breadcrumbs" remove="true" />
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="view.addto.wishlist" remove="true" />
+        <referenceBlock name="reviews.tab" remove="true" />
+        <referenceBlock name="product.info.stock.sku" remove="true"/>
+        <referenceBlock name="product.info.details">
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.delivery" template="product/view/delivery.phtml" after="product.info.details" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Delivery</argument>
+                    <argument name="sort_order" xsi:type="string">20</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.fit" template="product/view/fit.phtml" after="product.info.delivery" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Fit</argument>
+                    <argument name="sort_order" xsi:type="string">30</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View" name="product.info.share" template="product/view/share.phtml" after="product.info.fit" group="detailed_info" >
+                <arguments>
+                    <argument translate="true" name="title" xsi:type="string">Share</argument>
+                    <argument name="sort_order" xsi:type="string">40</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <move element="product.info.overview" destination="product.info.main" after="page.main.title"/>
+        <move element="product.info.review" destination="product.info.media" before="-"/>
+        <referenceContainer name="page.bottom.container">
+            <container name="editor-blog" as="editor-blog" label="Page Custom Content" htmlTag="div" htmlClass="editor-blog">
+                <block class="Magento\Cms\Block\Block" name="fashion_editor" before="-">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">editor-blog</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Cms\Block\Block" name="interest-free-payments" after="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">free-interest-payment</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Catalog\Block\Product\View" name="product.size.guide" template="product/view/size-guide.phtml" after="product.attributes"/>
+        </referenceContainer>
+    </body>
+</page>

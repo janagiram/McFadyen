@@ -1,0 +1,67 @@
+/*
+ *
+ *  * Author: Janagiram Ramakrishnan
+ *  * Email: janagirammca@gmail.com
+ *
+ */
+
+& when (@media-common = true) {
+    .page-bottom {
+        .editor-blog {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+    ul {
+        &.header{
+            &.links {
+                float: right;
+                display: inline-block;
+                list-style-type: none;
+                padding-left: 10px;
+                .link {
+                    &.authorization-link {
+                        a {
+                            width: 24px;
+                            height: 24px;
+                            background: url("../images/account.svg") no-repeat;
+                            display: block;
+                            text-indent: -9999px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .page-bottom {
+        .editor-blog {
+            max-width: @screen__l;
+        }
+    }
+}
+
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    ul {
+        &.header {
+            &.links {
+                display: none;
+            }
+        }
+    }
+    .page-bottom {
+        .editor-blog {
+            p {
+                line-height: 28px !important;
+                span {
+                    font-size: 20px !important;
+                }
+            }
+        }
+    }
+}

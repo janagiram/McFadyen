@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+  ~ /*
+  ~  * Author: Janagiram Ramakrishnan
+  ~  * Email: janagirammca@gmail.com
+  ~  */
+  -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+            </arguments>
+        </referenceBlock>
+        <move element="navigation.sections" destination="header-wrapper" after="logo"/>
+        <referenceBlock name="register-link" remove="true" />
+        <!-- Remove Welcome Greet Text -->
+        <referenceBlock name="header">
+            <arguments>
+                <argument name="show_part" xsi:type="string">other</argument>
+            </arguments>
+        </referenceBlock>
+        <move element="header.links" destination="header-wrapper" before="minicart" />
+        <referenceContainer name="header.container">
+            <referenceBlock name="header.panel.wrapper" remove="true" />
+        </referenceContainer>
+        <referenceBlock name="footer_links" remove="true"/>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="copyright" remove="true"/>
+    </body>
+</page>

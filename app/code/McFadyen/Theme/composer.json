@@ -1,0 +1,24 @@
+{
+    "name": "mcfadyen/theme",
+    "description": "McFadyen Theme Default",
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "janagiramramakrishnan",
+            "email": "janagirammca@gmail.com"
+        }
+    ],
+    "require": {
+        "fc/core": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Fc\\Brand\\": ""
+        }
+    }
+}
